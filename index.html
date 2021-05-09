@@ -14,6 +14,9 @@
     <!-- Latest compiled and minified JavaScript 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     -->
+    <!--Google fonts link-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <!--Linking external CSS-->
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -24,24 +27,24 @@
     <form id="formsubmit">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6"><label for="fname"><h3>First Name</h3> </label></div>
-                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6"><input type="text" name="fname" id="fname" class="properalign" required></div>
+                <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4"><label for="fname"><h3>First Name</h3> </label></div>
+                <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8"><input type="text" name="fname" id="fname" class="properalign" required></div>
             </div>
             <div class="row">
-                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6"><label for="lname"><h3>Last Name</h3></label></div>
-                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6"><input type="text" name="lname" id="lname" class="properalign" required></div>
+                <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4"><label for="lname"><h3>Last Name</h3></label></div>
+                <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8"><input type="text" name="lname" id="lname" class="properalign" required></div>
             </div>
             <div class="row">
-                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6"><label for="address"><h3>Address</h3></label></div>
-                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6"><input type="text" name="address" id="address" class="properalign" required></div>
+                <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4"><label for="address"><h3>Address</h3></label></div>
+                <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8"><input type="text" name="address" id="address" class="properalign" required></div>
             </div>
             <div class="row">
-                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6"><label for="pincode"><h3>Pincode</h3></label></div>
-                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6"><input type="number" name="pincode" id="pincode" class="properalign" required></div>
+                <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4"><label for="pincode"><h3>Pincode</h3></label></div>
+                <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8"><input type="number" name="pincode" id="pincode" class="properalign" required></div>
             </div>
             <div class="row">
-                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6"><label for=""><h3>Gender</h3></label></div>
-                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4"><label for=""><h3>Gender</h3></label></div>
+                <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
                     
                     <input type="radio" name="gender" id="male" value="Male" required> 
                     <label for="male"><h3>Male</h3></label>
@@ -54,8 +57,8 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6"><label for=""><h3>Food Choice</h3></label></div>
-                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4"><label for=""><h3>Food Choice</h3></label></div>
+                <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
                     <h6>(must choose at least 2 out
                         of 5 options)</h6>
                     <input type="checkbox" name="biryani" id="biryani" class="foodchoice" value="Biryani"> 
@@ -75,8 +78,8 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6"><label for="state"><h3>State</h3></label></div>
-                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4"><label for="state"><h3>State</h3></label></div>
+                <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
                     <select name="state" id="state" class="selectstyle greybackground properalign" required>
                         <option value=""><h4>--Select State--</h4></option>
                         <option value="Tamil Nadu"><h4>Tamil Nadu</h4></option>
@@ -86,8 +89,8 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6"><label for="country"><h3>Country</h3></label></div>
-                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4"><label for="country"><h3>Country</h3></label></div>
+                <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
                     <select name="country" id="country" class="selectstyle greybackground properalign" required>
                         <option value=""><h4>--Select Country--</h4></option>
                         <option value="India"><h4>India</h4></option>
