@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form-Task</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    -->
+    <!--Linking external CSS-->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!--First name, last name, address, pincode, gender, choice of food(must choose at least 2 out
+    of 5 options), state, country.
+    -->
+    <form id="formsubmit">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6"><label for="fname"><h3>First Name</h3> </label></div>
+                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6"><input type="text" name="fname" id="fname" class="properalign" required></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6"><label for="lname"><h3>Last Name</h3></label></div>
+                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6"><input type="text" name="lname" id="lname" class="properalign" required></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6"><label for="address"><h3>Address</h3></label></div>
+                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6"><input type="text" name="address" id="address" class="properalign" required></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6"><label for="pincode"><h3>Pincode</h3></label></div>
+                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6"><input type="number" name="pincode" id="pincode" class="properalign" required></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6"><label for=""><h3>Gender</h3></label></div>
+                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                    
+                    <input type="radio" name="gender" id="male" value="Male" required> 
+                    <label for="male"><h3>Male</h3></label>
+                    
+                    <input type="radio" name="gender" id="female" value="Female" required> 
+                    <label for="female"><h3>Female</h3></label>
+                    
+                    <input type="radio" name="gender" id="transgender" value="Transgender" required>
+                    <label for="transgender"><h3>Transgender</h3></label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6"><label for=""><h3>Food Choice</h3></label></div>
+                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                    <h6>(must choose at least 2 out
+                        of 5 options)</h6>
+                    <input type="checkbox" name="biryani" id="biryani" class="foodchoice" value="Biryani"> 
+                    <label for="biryani"><h4>Biryani</h4></label>
+                    
+                    <input type="checkbox" name="butterchicken" id="butterchicken" class="foodchoice" value="Butter Chicken"> 
+                    <label for="butterchicken"><h4>Butter Chicken</h4></label>
+                    
+                    <input type="checkbox" name="sambharidli" id="sambharidli" class="foodchoice" value="Sambhar Idli">
+                    <label for="sambharidli"><h4>Sambhar Idli</h4></label>
+
+                    <input type="checkbox" name="maggie" id="maggie" class="foodchoice" value="Maggie">
+                    <label for="maggie"><h4>Maggie</h4></label>
+
+                    <input type="checkbox" name="rasmalai" id="rasmalai" class="foodchoice" value="Ras Malai">
+                    <label for="rasmalai"><h4>Rasmalai</h4></label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6"><label for="state"><h3>State</h3></label></div>
+                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                    <select name="state" id="state" class="selectstyle greybackground properalign" required>
+                        <option value=""><h4>--Select State--</h4></option>
+                        <option value="Tamil Nadu"><h4>Tamil Nadu</h4></option>
+                        <option value="andhrapradesh"><h4>Andhrs Pradesh</h4></option>
+                        <option value="kerela"><h4>Kerela</h4></option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6"><label for="country"><h3>Country</h3></label></div>
+                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                    <select name="country" id="country" class="selectstyle greybackground properalign" required>
+                        <option value=""><h4>--Select Country--</h4></option>
+                        <option value="India"><h4>India</h4></option>
+                        <option value="china"><h4>China</h4></option>
+                        <option value="japan"><h4>Japan</h4></option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm col-md col-lg col-xl"><input type="submit" value="Submit" id="submit" class="submitstyle"></div>
+            </div>
+        </div>
+    </form>
+    <!--Adding JavaScript-->
+    <script src="script.js"></script>
+</body>
+</html>
