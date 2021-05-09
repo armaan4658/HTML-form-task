@@ -1,8 +1,8 @@
-
 //Listen for form submit
 document.getElementById('formsubmit').addEventListener('submit',submitform);
 function submitform(e){
     e.preventDefault();
+    //getting value
     var firstname = getValue("fname");
     var lastname = getValue("lname");
     var address = getValue("address");
@@ -10,7 +10,6 @@ function submitform(e){
     var state = getValue("state");
     var country = getValue("country");
     var gender = document.querySelector('input[name="gender"]:checked').value; 
-
     var checkb = document.querySelectorAll('.foodchoice');
     var foodchoice = []
     for(let i in checkb){
@@ -18,7 +17,7 @@ function submitform(e){
             foodchoice.push(checkb[i].value);
         }
     }
-
+    //checking if more then one food choice is selected
     if(foodchoice.length < 2){
 
         var div = document.createElement("div");
@@ -26,23 +25,28 @@ function submitform(e){
         var para = document.createElement("p");
         para.innerHTML = "<h4>Food choice must be more than one</h4>";
         div.append(para);
+        para.style="position:relative;top:-5%;transform:translate(0,-5%)"
         document.body.append(div);
         setTimeout(()=>{
             para.style="display:none";
         },1000*2)
     }
     else{
-
+        //calling function create table
         createTable(firstname,lastname,address,pincode,state,country,gender,foodchoice);
         document.getElementById('formsubmit').reset();
     }
 }
+//To get Values using "ID"
 function getValue(id){
     return document.getElementById(id).value;
 }
 function createTable(firstname,lastname,address,pincode,state,country,gender,foodchoice){
+    //creating div element
     var container2 = document.createElement("div");
+    //setting class container 
     container2.setAttribute("class","container tableborder");
+    //creating div element for table rows
     var row1 = document.createElement("div");
     var row2 = document.createElement("div");
     var row3 = document.createElement("div");
@@ -59,6 +63,7 @@ function createTable(firstname,lastname,address,pincode,state,country,gender,foo
     row6.setAttribute("class","row rowborder");
     row7.setAttribute("class","row rowborder");
     row8.setAttribute("class","row");
+    //creating div element for table colomns
     var col11 = document.createElement("div");
     col11.setAttribute("class","col-sm-6 col-md-6 col-lg-6 col-xl-6")
     var col12 = document.createElement("div");
@@ -91,6 +96,7 @@ function createTable(firstname,lastname,address,pincode,state,country,gender,foo
     col81.setAttribute("class","col-sm-6 col-md-6 col-lg-6 col-xl-6")
     var col82 = document.createElement("div");
     col82.setAttribute("class","col-sm-6 col-md-6 col-lg-6 col-xl-6 colborder");
+    //appending colomns to rows
     row1.append(col11,col12);
     row2.append(col21,col22);
     row3.append(col31,col32);
@@ -99,7 +105,7 @@ function createTable(firstname,lastname,address,pincode,state,country,gender,foo
     row6.append(col61,col62);
     row7.append(col71,col72);
     row8.append(col81,col82);
-
+    //adding content to the colomns
     col11.innerHTML = `<h3>First Name</h3>`;
     col12.innerHTML = `<h3>${firstname}</h3>`;
     col21.innerHTML = `<h3>Last Name</h3>`;
@@ -111,11 +117,13 @@ function createTable(firstname,lastname,address,pincode,state,country,gender,foo
     col51.innerHTML = `<h3>Gender</h3>`;
     col52.innerHTML = `<h3>${gender}</h3>`;
     col61.innerHTML = `<h3>Food</h3>`;
-    col62.innerHTML = `<h3>${foodchoice.join(" ")}</h3>`;
+    col62.innerHTML = `<h3>${foodchoice.join(", ")}</h3>`;
     col71.innerHTML = `<h3>State</h3>`;
     col72.innerHTML = `<h3>${state}</h3>`;
     col81.innerHTML = `<h3>Country</h3>`;
     col82.innerHTML = `<h3>${country}</h3>`;
+    //appending rows to the container
     container2.append(row1,row2,row3,row4,row5,row6,row7,row8);
+    //appending container to the body
     document.body.append(container2);
 }
