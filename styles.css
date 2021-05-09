@@ -1,5 +1,16 @@
 body{
     padding: 10px;
+    background-color: rgb(169, 238, 169);
+    font-family: 'Oswald', sans-serif;
+}
+#formsubmit{
+    border-radius: 5px;
+    background-color: white;
+    width: 70%;
+    position: relative;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,10%);
 }
 .selectstyle{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -17,8 +28,8 @@ body{
     border-radius: 5px;
     position: relative;
     top:50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    left: 40%;
+    transform: translate(-40%,30%);
     color: white;
     margin-bottom: 10px;
 }
@@ -29,13 +40,20 @@ h6{
     position: relative;
     top: 50%;
     transform: translate(0,50%);
+    
 }
 .centeralign{
     text-align: center;
 }
 .tableborder{
     border: 1px solid black;
+    position: relative;
+    left: 50%;
+    top:50%;
+    transform: translate(-71%,15%);
     border-radius: 5px;
+    background-color: white;
+    width: 70%;
 }
 .rowborder{
     border-bottom: 1px solid black;
